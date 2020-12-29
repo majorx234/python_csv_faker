@@ -30,5 +30,5 @@ if __name__ == '__main__':
   fake.add_provider(GamesProvider)
 
   # now you can use:
-  print(type(fake.games()))
+  print(fake.games())
      
