@@ -30,7 +30,8 @@ def datagenerate(records, headers):
             email = Fname +"."+ Lname + domain_name
             username = Fname + "X234"
             password = fake.passwords()
-            premd5password = password.encode()
+            password_salted = password + username
+            premd5password = password_salted.encode()
             md5password = hashlib.md5(premd5password)
             md5password_digest = md5password.hexdigest()
             writer.writerow({
