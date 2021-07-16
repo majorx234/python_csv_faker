@@ -30,7 +30,7 @@ def datagenerate(records, headers):
             email = Fname +"."+ Lname + domain_name
             username = Fname + "X234"
             writer.writerow({
-                "UserID" : userId,
+                "UserId" : userId,
                 "FirstName" : Fname,
                 "LastName": Lname,
                 "Email": email,
@@ -41,6 +41,6 @@ def datagenerate(records, headers):
     
 if __name__ == '__main__':
     records = 10
-    headers = ["UserID","FirstName","LastName","UserName","Password","Email","Lieblingsgame" ]
+    headers = ["UserId","FirstName","LastName","UserName","Password","Email","Lieblingsgame" ]
     datagenerate(records, headers)
     print("CSV generation complete!")
